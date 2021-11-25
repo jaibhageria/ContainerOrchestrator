@@ -1,0 +1,10 @@
+{
+
+	"settings": {
+		"ImageName": "acts:latest",
+		"HealthCheckTimeDelay": 1,
+		"ScalingTimeDelay": 120,
+		"RequestsGap": 20
+	}
+
+}

@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+        mongo-service:
+                image: mongo
+                volumes:
+                        - ~/data:/data/db
+                ports:
+                        - "27017:27017"
+                container_name: mongo
+        acts-service:
+                build: ./actsapp
+                image: acts:latest
+                volumes:
+                        - ./actsapp/acts:/acts_app
+                ports:
+                        - "8000:80"
+                container_name: acts
+                depends_on:
+                        - mongo-service
+
